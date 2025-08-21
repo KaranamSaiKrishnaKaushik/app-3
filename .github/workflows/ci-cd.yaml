@@ -4,12 +4,19 @@ on:
   push:
     branches: [ main ]
 
+# Grant write permission for repo contents so the workflow can push commits
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout the repo with the proper token for pushing changes
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Log in to DockerHub
         run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
@@ -36,5 +43,6 @@ jobs:
         run: |
           git config --global user.email "karanamsaikrishna.kaushik@gmail.com"
           git config --global user.name "KaranamSaiKrishnaKaushik"
-          git commit -am "update images to ${{ github.sha }}" || echo "No changes to commit"
+          git add k8s/api-deployment.yaml k8s/web-deployment.yaml
+          git commit -m "update images to ${{ github.sha }}" || echo "No changes to commit"
           git push
