@@ -19,6 +19,9 @@ jobs:
           docker build -t dokkaushik/dotnet-app-3:${{ github.sha }} -f dotnet-app-3/Dockerfile ./dotnet-app-3
           docker push dokkaushik/dotnet-app-3:${{ github.sha }}
 
+      - name: Debug repo files
+        run: ls -R
+
       - name: Build & Push Frontend
         run: |
           docker build -t dokkaushik/angular-app-3:${{ github.sha }} -f angular-app-3/Dockerfile ./angular-app-3
