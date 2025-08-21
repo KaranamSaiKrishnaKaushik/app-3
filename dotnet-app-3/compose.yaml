@@ -1,0 +1,7 @@
+﻿services:
+  dotnet-app-3:
+    image: dotnet-app-3
+    build:
+      context: .
+      dockerfile: dotnet-app-3/Dockerfile
+

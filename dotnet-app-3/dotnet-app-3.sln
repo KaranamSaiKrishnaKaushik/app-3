@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-app-3", "dotnet-app-3\dotnet-app-3.csproj", "{615EAA2A-D4CC-47B5-905C-75BA2B423F2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B54FBBA0-04C5-4E6C-88CB-4ADD606E73A8}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{615EAA2A-D4CC-47B5-905C-75BA2B423F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{615EAA2A-D4CC-47B5-905C-75BA2B423F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{615EAA2A-D4CC-47B5-905C-75BA2B423F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{615EAA2A-D4CC-47B5-905C-75BA2B423F2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+  namespace: app-3-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: angular-app-3
+  template:
+    metadata:
+      labels:
+        app: angular-app-3
+    spec:
+      containers:
+        - name: angular-app-3
+          image: dokkaushik/angular-app-3:latest
+          ports:
+            - containerPort: 80
