@@ -4,7 +4,7 @@ metadata:
   name: web-service
   namespace: app-3-dev
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: angular-app-3
   ports:
