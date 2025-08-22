@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: dotnet-app-3
-          image: dokkaushik/dotnet-app-3:8b0ba064979c095046a76104d56733be61e7dee3
+          image: dokkaushik/dotnet-app-3:44eaea2666a0955f64af1b985d929743abf3591a
           ports:
             - containerPort: 5000
